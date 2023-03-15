@@ -1,7 +1,7 @@
 const products = [
   {
     _id: "1",
-    name: "Purdue University Fort Wayne Mastodons Banded Sweatpants",
+    name: "PFW Mastodons Banded Sweatpants",
     image: "/images/lower.png",
     description:
       "The Champion Eco Powerblend Banded Bottom Pant provides ultimate comfort. Brushed inside to make them super soft, these pants are even better because they are made with recycled polyester fibers. Show Mastodons pride while being stylish, comfortable, and eco-friendly all at the same time. These pants feature a 31'' inseam, inside drawcord at waistband, and covered elastic ankle. There are also side pockets for keeping your id, cash, keys and game day tickets. Screen Printed Purdue University Fort Wayne graphics.",
@@ -14,7 +14,7 @@ const products = [
   },
   {
     _id: "2",
-    name: "Purdue University Fort Wayne 84x54 Mastodons Sweatshirt Blanket",
+    name: "PFW 84x54 Mastodons Blanket",
     image: "/images/blanket.png",
     description:
       "This large, heavyweight Sweatshirt Blanket is extra-soft like your favorite sweatshirt. Features a large logo on primary team color fabric. Snuggle up in team spirit with this high quality blanket. Cozy up, this blanket is large enough to share. Machine washable. 84'' x 54''. Screen printed.",
@@ -27,7 +27,7 @@ const products = [
   },
   {
     _id: "3",
-    name: "PFW Hoodie",
+    name: "PFW Grey Hoodie @Champion ",
     image: "/images/hoodie.png",
     description:
       "Stay warm -- and show that pride! The screen-printed graphic on the front of this hooded sweatshirt will communicate your school allegiance while you stay cozy in soft cotton/polyester fabric. Attached drawstring hood. Front kangaroo pocket. Rib-knit cuffs and bottom hem.",
@@ -40,7 +40,7 @@ const products = [
   },
   {
     _id: "4",
-    name: "Mastodon Hat",
+    name: "Hat with a Mastodon Logo",
     image: "/images/hat.png",
     description:
       "Top off a casual look with this easy twill campus hat. This washed cotton twill cap features an unstructured relaxed fit, a self-fabric sweatband, eyelets for ventilation, a curved front bill, and an adjustable back strap for a custom fit. You're a-head of the pack with the small school mascot logo embroidered on the front.",

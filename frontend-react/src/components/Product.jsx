@@ -8,7 +8,7 @@ const Product = ({ product }) => {
     //TODO: Work on the image size making it uniform
     <Card className="my-3 p-3 rounded">
       <Link to={`/product/${product._id}`}>
-        <Card.Img src={product.image} variant="top" />
+        <Card.Img src={product.image} variant="top" className="img-fluid" />
       </Link>
 
       <Card.Body>
