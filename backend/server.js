@@ -1,27 +1,29 @@
-import express from 'express'
-import products from './data/products.js'
-import dotenv from 'dotenv'
+import express from "express";
+// import products from "./data/products.js"; using routes in place of old js data model file
+import dotenv from "dotenv";
+import colors from "colors";
+import connectDB from "./config/db.js";
 
-const app = express()
+import productRoutes from "./routes/productRoutes.js";
 
-dotenv.config()
+dotenv.config();
 
-app.get('/', (req, res) => {
-    res.send('Api is running..')
-})
+// connect the db from mongoose
+connectDB();
 
-app.get('/api/products', (req, res) => {
-    res.json(products)
-})
+const app = express();
 
-app.get('/api/products/:id', (req, res) => {
-    const product = products.find((p) => p._id === req.params.id)
-    res.json(product)
-})
+app.get("/", (req, res) => {
+  res.send("Api is running..");
+});
 
-const PORT = process.env.PORT || 4000
-// change port to 5000 when merging 
+app.use("/api/products", productRoutes);
+
+const PORT = process.env.PORT || 4000;
+// change port to 5000 when merging
 app.listen(
-    PORT,
-    console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`)
-)
+  PORT,
+  console.log(
+    `Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.cyan.bold
+  )
+);
