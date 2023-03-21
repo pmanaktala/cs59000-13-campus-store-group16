@@ -31,7 +31,6 @@ const ProductScreen = ({ history }) => {
 
       const { data } = await axios.get(`/api/products/${id}`);
 
-      console.log(data);
       setProduct(data);
     };
 
