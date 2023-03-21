@@ -1,21 +1,42 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { Row, Col, Image, ListGroup, Card, Button } from "react-bootstrap";
+import { Link, useParams } from "react-router-dom";
+import {
+  Row,
+  Col,
+  Image,
+  Form,
+  ListGroup,
+  Card,
+  Button,
+} from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import Rating from "../components/Rating";
-import axios from 'axios';
+import axios from "axios";
 
-const ProductScreen = ({match}) => {
-  const [product, setProduct] = useState({})
+const ProductScreen = ({ history }) => {
+  //Changes due to react-router-6, we do not have match or history instead we are using navigate and useParams
+  let navigate = useNavigate();
+  const { id } = useParams();
+
+  const [quantity, setQuantity] = useState(0);
+  const [product, setProduct] = useState({});
+
+  const addToCartHandler = () => {
+    navigate(`/cart/${id}?qty=${quantity}`);
+  };
 
   useEffect(() => {
     const fetchProduct = async () => {
-      const { data } = await axios.get(`/api/product/${match.params.id}`)
+      console.log(id);
 
-      setProduct(data)
-    }
+      const { data } = await axios.get(`/api/products/${id}`);
 
-    fetchProduct()
-  }, [match]) 
+      console.log(data);
+      setProduct(data);
+    };
+
+    fetchProduct();
+  }, [id]);
 
   return (
     <>
@@ -62,11 +83,39 @@ const ProductScreen = ({match}) => {
                 </Row>
               </ListGroup.Item>
 
+              {product.countInStock > 0 && (
+                <ListGroup.Item>
+                  <Row>
+                    <Col> Quantity </Col>
+                    <Col>
+                      <Form.Control
+                        as={"select"}
+                        value={quantity}
+                        onChange={(e) => {
+                          setQuantity(e.target.value);
+                        }}
+                      >
+                        {[...Array(product.countInStock).keys()].map(
+                          (number) => {
+                            return (
+                              <option key={number + 1} value={number + 1}>
+                                {number + 1}
+                              </option>
+                            );
+                          }
+                        )}
+                      </Form.Control>
+                    </Col>
+                  </Row>
+                </ListGroup.Item>
+              )}
+
               <ListGroup.Item>
                 <Button
                   className="btn-block"
                   type="button"
                   disabled={product.countInStock <= 0}
+                  onClick={addToCartHandler}
                 >
                   Add to Cart
                 </Button>
