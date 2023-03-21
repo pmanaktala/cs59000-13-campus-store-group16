@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/pmanaktala/cs59000-13-campus-store-group16#readme",
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.3",
     "axios": "^1.3.4",
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
