@@ -21,7 +21,10 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
         };
       }
     case CART_REMOVE_ITEM:
-      return { loading: false, products: action.payload };
+      return {
+        ...state,
+        cartItems: state.cartItems.filter((x) => x.product !== action.payload),
+      };
     default:
       return state;
   }

@@ -29,9 +29,11 @@ const initialState = {
 };
 const middleware = [thunk];
 
-const store = configureStore(
-  { reducer, initialState },
-  composeWithDevTools(applyMiddleware(...middleware))
-);
+const store = configureStore({
+  reducer,
+  middleware,
+  devTools: process.env.NODE_ENV !== "production",
+  preloadedState: initialState,
+});
 
 export default store;

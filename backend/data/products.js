@@ -3,7 +3,7 @@ const products = [
     name: "PFW Mastodons Banded Sweatpants",
     image: "/images/lower.png",
     description:
-      "The Champion Eco Powerblend Banded Bottom Pant provides ultimate comfort. Brushed inside to make them super soft, these pants are even better because they are made with recycled polyester fibers. Show Mastodons pride while being stylish, comfortable, and eco-friendly all at the same time. These pants feature a 31'' inseam, inside drawcord at waistband, and covered elastic ankle. There are also side pockets for keeping your id, cash, keys and game day tickets. Screen Printed Purdue University Fort Wayne graphics.",
+      "The Champion Eco Power blend Banded Bottom Pant provides ultimate comfort. Brushed inside to make them super soft, these pants are even better because they are made with recycled polyester fibers. Show Mastodons pride while being stylish, comfortable, and eco-friendly all at the same time. These pants feature a 31'' inseam, inside drawcord at waistband, and covered elastic ankle. There are also side pockets for keeping your id, cash, keys and game day tickets. Screen Printed Purdue University Fort Wayne graphics.",
     brand: "Champion",
     category: "Clothing",
     price: 38.0,
