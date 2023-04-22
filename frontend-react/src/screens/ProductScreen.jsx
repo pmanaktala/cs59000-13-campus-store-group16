@@ -13,7 +13,7 @@ import Rating from "../components/Rating";
 import { useDispatch, useSelector } from "react-redux";
 import { listProductDetails } from "../actions/productActions";
 import Loader from "../components/Loader";
-import Message from "../components/message";
+import Message from "../components/Message";
 
 const ProductScreen = () => {
   //Changes due to react-router-6, we do not have match or history instead we are using navigate and useParams

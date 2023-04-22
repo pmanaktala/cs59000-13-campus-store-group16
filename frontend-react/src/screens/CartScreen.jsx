@@ -16,7 +16,7 @@ import {
 } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeFromCart } from "../actions/cartActions";
-import Message from "../components/message";
+import Message from "../components/Message";
 
 const CartScreen = () => {
   const { id } = useParams();
