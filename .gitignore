@@ -136,10 +136,10 @@ dist
 .pnp.*
 package-lock.json
 
-frontend-react/package-lock.json
+frontend/package-lock.json
 package-lock.json
 package-lock.json
 .env
 package-lock.json
-frontend-react/package-lock.json
-frontend-react/package-lock.json
+frontend/package-lock.json
+frontend/package-lock.json
