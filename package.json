@@ -6,7 +6,6 @@
   "type": "module",
   "scripts": {
     "start": "node backend/server",
-    "build": "cd frontend && npm run build",
     "server": "npx kill-port 4000 && nodemon backend/server # Killing port 4000 before starting server",
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
