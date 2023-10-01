@@ -42,6 +42,8 @@ app.use(errorHandler);
 
 if (process.env.NODE_ENV === "production") {
   //*Set static folder up in production
+
+  console.log('Running in Production Mode');
   app.use(express.static("client/build"));
 
   app.get("*", (req, res) =>
